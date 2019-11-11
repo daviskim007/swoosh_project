@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LeagueActivity">
+    tools:context=".Controller.LeagueActivity">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -69,32 +69,35 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <ToggleButton
-            android:id="@+id/toggleButton"
+            android:id="@+id/mensLeagueBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/swoosh_toggle"
+            android:onClick="onMensClicked"
             android:text="@string/mens"
             android:textColor="#FFFFFF"
             android:textOff="@string/mens"
             android:textOn="@string/mens" />
 
         <ToggleButton
-            android:id="@+id/toggleButton3"
+            android:id="@+id/womensLeagueBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/swoosh_toggle"
+            android:onClick="onWomensClicked"
             android:text="@string/womens"
             android:textColor="#FFFFFF"
             android:textOff="@string/womens"
             android:textOn="@string/womens" />
 
         <ToggleButton
-            android:id="@+id/toggleButton2"
+            android:id="@+id/coedLeagueBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/swoosh_toggle"
+            android:onClick="onCoedClicked"
             android:text="@string/co_ed"
             android:textColor="#FFFFFF"
             android:textOff="@string/co_ed"
@@ -102,16 +105,17 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/leagueNextBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/swoosh_button"
+        android:onClick="leagueNextClicked"
         android:text="@string/next"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
